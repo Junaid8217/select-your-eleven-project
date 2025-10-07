@@ -1,6 +1,6 @@
 import { Suspense, useState } from 'react'
 
-
+ import { ToastContainer } from 'react-toastify';
 import './App.css'
 
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
@@ -15,7 +15,7 @@ const playerPromise = fetchPlayers()
 
 function App() {
   const [toggle, setToggle] = useState(true) 
-  const [availableBalance, setAvailableBalance] = useState(600000)
+  const [availableBalance, setAvailableBalance] = useState(800000)
   const [purchasedPlayers, setPurchasedPlayers] = useState([])
 
   const removePlayer = (p) => {
@@ -48,7 +48,7 @@ function App() {
      
      
 
-
+      <ToastContainer/>
     </>
   )
 }
